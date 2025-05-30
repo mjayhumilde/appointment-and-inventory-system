@@ -1,0 +1,23 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    // These are common compiler options for a JS project that might use some TS features implicitly.
+    // You can keep it minimal, but adding a few standard ones helps ensure it's a valid TS config.
+    "jsx": "react-jsx",
+    "allowJs": true, // Allow JavaScript files to be part of the program
+    "checkJs": true, // Enable type checking for JavaScript files (optional, but good practice)
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  // You might also need to include your source files.
+  // If your main JS files are in 'src', this is good.
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
