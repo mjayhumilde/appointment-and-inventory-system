@@ -18,7 +18,7 @@ import logo from "../assets/logo/mainLogo.png";
 
 const Header = () => {
   return (
-    <header className="fixed w-full px-10 py-5 text-white bg-custom-black">
+    <header className="fixed z-50 w-full px-10 py-5 text-white bg-custom-black">
       <div className="container flex items-center justify-between mx-auto">
         {/* right */}
 
