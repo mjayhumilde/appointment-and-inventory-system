@@ -1,12 +1,51 @@
-import { ChevronDown, Search, ShoppingCart } from "lucide-react";
+// @ts-nocheck
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import {
+  ChevronDown,
+  Menu,
+  MenuIcon,
+  Search,
+  ShoppingCart,
+} from "lucide-react";
 import logo from "../assets/logo/mainLogo.png";
 
 const Header = () => {
   return (
-    <header className="fixed w-full px-10 py-5 bg-custom-black">
+    <header className="fixed w-full px-10 py-5 text-white bg-custom-black">
       <div className="container flex items-center justify-between mx-auto">
         {/* right */}
-        <img src={logo} alt="" className="w-1/7 hover:cursor-pointer" />
+
+        <Sheet>
+          <SheetTrigger>
+            <MenuIcon className="hover:cursor-pointer" size={32} />
+          </SheetTrigger>
+          <SheetContent className="bg-custom-black" side="left">
+            <SheetHeader>
+              <SheetTitle>
+                <img src={logo} alt="" />
+              </SheetTitle>
+              <SheetDescription>
+                <div className="mt-10 space-y-10 text-xl font-bold text-white">
+                  <h2 className="pb-2 border-b-2 hover:cursor-pointer">Home</h2>
+                  <h2 className="pb-2 border-b-2 hover:cursor-pointer">
+                    Appointments
+                  </h2>
+                  <h2 className="pb-2 border-b-2 hover:cursor-pointer">
+                    Products Page
+                  </h2>
+                </div>
+              </SheetDescription>
+            </SheetHeader>
+          </SheetContent>
+        </Sheet>
+        <img src={logo} alt="" className="w-2/11 hover:cursor-pointer" />
 
         {/* middle */}
         <div className="flex items-center justify-center text-gray-500 bg-white rounded-sm w-6/10 ">

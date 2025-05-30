@@ -14,7 +14,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "outDir": "dist"
   },
   // You might also need to include your source files.
   // If your main JS files are in 'src', this is good.
