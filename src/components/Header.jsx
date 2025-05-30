@@ -15,8 +15,10 @@ import {
   ShoppingCart,
 } from "lucide-react";
 import logo from "../assets/logo/mainLogo.png";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className="fixed z-50 w-full px-10 py-5 text-white bg-custom-black">
       <div className="container flex items-center justify-between mx-auto">
@@ -29,15 +31,26 @@ const Header = () => {
           <SheetContent className="bg-custom-black" side="left">
             <SheetHeader>
               <SheetTitle>
-                <img src={logo} alt="" />
+                <img src={logo} alt="Boss Lan Logo" />
               </SheetTitle>
               <SheetDescription>
-                <div className="mt-10 space-y-10 text-xl font-bold text-white">
-                  <h2 className="pb-2 border-b-2 hover:cursor-pointer">Home</h2>
-                  <h2 className="pb-2 border-b-2 hover:cursor-pointer">
+                <div className="mt-10 space-y-10 text-xl italic font-bold text-center text-white">
+                  <h2
+                    onClick={() => navigate("/")}
+                    className="pb-2 border-b-2 hover:cursor-pointer"
+                  >
+                    Home
+                  </h2>
+                  <h2
+                    onClick={() => navigate("appointments")}
+                    className="pb-2 border-b-2 hover:cursor-pointer"
+                  >
                     Appointments
                   </h2>
-                  <h2 className="pb-2 border-b-2 hover:cursor-pointer">
+                  <h2
+                    onClick={() => navigate("products")}
+                    className="pb-2 border-b-2 hover:cursor-pointer"
+                  >
                     Products Page
                   </h2>
                 </div>

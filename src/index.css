@@ -6,6 +6,7 @@
 @theme {
   --color-custom-black: #0f0e0e;
   --color-header-red: #e81212;
+  --color-gray-bgmain: #e1e3e4;
 }
 
 :root {
